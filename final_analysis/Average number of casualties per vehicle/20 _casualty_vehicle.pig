@@ -6,3 +6,4 @@ columns_vehicle_casualty = FOREACH accident_limit GENERATE $8 as Number_of_Vehic
 STORE columns vehicle casualty INTO 'output/Columns of Vehicle and Casualty' using PigStorage(',");
 
 
+
