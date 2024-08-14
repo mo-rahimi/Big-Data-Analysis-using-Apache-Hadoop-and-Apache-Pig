@@ -1,4 +1,4 @@
-# Analysis of UK Accident Data using Hadoop and Pig environment
+# Analysis of UK Accident Data using Apache Hadoop and Apache Pig
 ## Description  
 • Based on the statistics data around 1.3 million people are being killed yearly in road accidents and around 40 million people are being injured or experienced disability due to an accident.
 • Regarding the considerable economic losses that might happen to individuals, their families, and to nations in road accidents, figuring out the major reasoning of road crashes and finding out the solutions to decrease these losses is a vital task to do.
@@ -129,7 +129,34 @@ Accidents by Day of the Week
 This project demonstrates the use of Hadoop and Pig for big data analysis and the application of Python for data visualization. The insights gained can help identify the factors contributing to road accidents and inform strategies to reduce their severity and frequency.
 
 ## Contributing
-Feel free to modify any sections or add additional code snippets and visualizations as necessary to fit your project's needs.
+
+
+We welcome and appreciate contributions from the community! If you would like to contribute to this project, please follow these guidelines:
+
+1. **Fork the repository**: 
+
+2. **Clone the repository**: C
+
+```bash
+git clone https://github.com/your-username/project-name.git
+```
+
+4. **Create a branch**:
+
+```bash
+git checkout -b your-branch-name
+```
+
+4. **Make your changes**: Make your changes and commit them to your branch.
+5. **Push your changes**: Push your changes to your forked repository on GitHub.
+```
+bash
+git push origin your-branch-name
+```
+
+6. **Create a pull request**: Go to your forked repository on GitHub and create a new pull request. 
+
+Thank you for your interest in contributing to this project! We look forward to reviewing your changes and working together to improve the project.
 
 ## License
 
