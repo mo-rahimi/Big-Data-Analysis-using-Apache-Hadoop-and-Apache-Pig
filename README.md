@@ -1,26 +1,12 @@
-# Hadoop-Pig-BigData
-Analysis of UK Accident Data using Hadoop and Pig environment
+# Analysis of UK Accident Data using Hadoop and Pig environment
 ## Description  
-Introduction
-Big Data Analysis of UK Accident by Hadoop in Pig environment
 • Based on the statistics data around 1.3 million people are being killed yearly in road accidents and around 40 million people are being injured or experienced disability due to an accident.
 • Regarding the considerable economic losses that might happen to individuals, their families, and to nations in road accidents, figuring out the major reasoning of road crashes and finding out the solutions to decrease these losses is a vital task to do.
-Two important approaches:
-• First: investigating the influence of different conditions such as road type, road surface condition, weather condition and light condition on the severity of accidents.
-• Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
-In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
-
-## Analysis Stages
-Downloading UK accident data
-Loading data to Hadoop
-Comprehending dataset
-Data pre-processing
-Query and problem Statements
-Using Pig to analysis the data
-Answering the problems and visualization
 
 ## Table of Contents
+- [Introduction](#introduction)
 - [Installation](#installation)
+- [Dataset Overview](#dataset_overview)
 - [Usage](#usage)
 - [Code Examples](#code-examples)
 - [Conclusion](#conclusion)
@@ -30,20 +16,112 @@ Answering the problems and visualization
 
 
 
+### Introduction
+
+This project analyzes UK accident data to understand the factors influencing road accidents and their severity. The analysis focuses on:
+
+- Investigating the impact of road conditions, weather, and light conditions on accident severity.
+- Exploring the relationship between the number of vehicles involved and the severity of accidents.
+
+The data analysis is performed using the Pig tool, while Python is utilized for data visualization.
+
+Two important approaches:
+• First: investigating the influence of different conditions such as road type, road surface condition, weather condition and light condition on the severity of accidents.
+• Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
+In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
+
+
 
 ## Installation
 Architecture
-#### SoftwareRequirements: 
-• WindowsOS
-• Virtual Machine to run Hortonworks Sandbox 
-• Hadoop
-• Pig
-• Python to do the data visualization
+### Software Requirements
+- Windows OS
+- Virtual Machine to run Hortonworks Sandbox
+- Hadoop
+- Pig
+- Python for data visualization
 
-#### HardwareRequirements:
-• Hard Disk- at least 500 GB 
-• RAM- at least 12 GB
-• Processor- Core i5 or above
+### Hardware Requirements
+- Hard Disk: at least 500 GB
+- RAM: at least 12 GB
+- Processor: Core i5 or above
+
+## Dataset Overview
+- The dataset includes over 1.8 million accidents from 2000 to 2018, with 30,032 rows analyzed for this project.
+- Key features include:
+  - **Accident Severity**: Classified into levels 1 to 5; most accidents (87%) have moderate severity (Level 3).
+  - **Day of Week**: Analyzed to determine the distribution of accidents by day.
+
+- The UK accident data is sourced from [Kaggle](www.Kaggle.com).
+
+## Usage (Hadoop, Pig)
+### Loading Data to Hadoop
+
+1. **Run Hortonworks Sandbox** in a Virtual Machine.
+2. **Upload Data to HDFS**:
+   - Use the Ambari environment to create a directory (`Big_Data_Project`) and upload `UK_CarAccident_Data.csv` to HDFS.
+
+### Data Analysis Using Pig
+
+1. **Access Pig View** in Ambari to write, run, and store Pig scripts for data analysis.
+2. **Scripts**: A total of 23 scripts are created for various analyses. Example scripts include:
+   - **Severity Analysis**: Analyzing accident severity based on different conditions.
+   - **Casualties Analysis**: Counting casualties per accident severity.
+
+3. **Save Results**: Use the STORE command to save the results in HDFS under the `admin/output` directory.
+
+
+### Code Examples
+
+#### Sample Pig Script for Accident Severity
+
+```pig
+accident = LOAD '/user/big_data_project/UK_CarAccident.csv' USING PigStorage(',') AS (
+    No:int, Accident_Index:chararray, Location_Easting_OSGR:int, 
+    Location_Northing_OSGR:int, Longitude:double, Latitude:double, 
+    Police_Force:int, Accident_Severity:chararray, 
+    Number_of_Vehicles:int, Number_of_Casualties:int, 
+    Date:chararray, Day_of_Week:chararray, Time:chararray
+);
+
+-- Limit to first 30,000 entries
+accident_limit = LIMIT accident 30000;
+
+-- Group by severity
+severity_count = GROUP accident_limit BY Accident_Severity;
+
+-- Count accidents by severity
+count_severity = FOREACH severity_count GENERATE 
+    group AS Severity, COUNT(accident_limit) AS Count;
+
+DUMP count_severity;
+```
+
+### Visualizations
+
+- **Accident Severity Distribution**: A pie chart showing the distribution of accident severity levels.
+  
+Accident Severity Pie Chart
+
+- **Accidents by Day of the Week**: A bar chart illustrating the number of accidents occurring on each day.
+
+Accidents by Day of the Week
+
+### Conclusion
+
+This project demonstrates the use of Hadoop and Pig for big data analysis and the application of Python for data visualization. The insights gained can help identify the factors contributing to road accidents and inform strategies to reduce their severity and frequency.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Feel free to modify any sections or add additional code snippets and visualizations as necessary to fit your project's needs.
+
+Citations:
+[1] https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/24830350/f24c2348-f433-4fae-97d6-cf10e90c4f8d/Big-Data-Analysis-of-UK-Accident-by-Hadoop-in-Pig-environment.pdf
+
 
 
 
