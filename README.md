@@ -1,5 +1,7 @@
-# Analysis of UK Accident Data using Apache Hadoop and Apache Pig
+# Big Data Analysis using Apache Hadoop and Apache Pig
+- Analysis of UK Accident Data
 ## Description  
+My inspiration to do an analysis on accident data comes back to my first position as a data analyst at traffic department at 2011. 
 • Based on the statistics data around 1.3 million people are being killed yearly in road accidents and around 40 million people are being injured or experienced disability due to an accident.
 • Regarding the considerable economic losses that might happen to individuals, their families, and to nations in road accidents, figuring out the major reasoning of road crashes and finding out the solutions to decrease these losses is a vital task to do.
 
