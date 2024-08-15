@@ -1,9 +1,7 @@
 # Big Data Analysis using Apache Hadoop and Apache Pig
 - `Analysis of UK Accident Data`🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
 
-[View the interactive map](https://github.com/mo-rahimi/Hadoop-Pig-BigData-2022/heatmap_with_filter.html)
-    
-[View the interactive map](https://mo-rahimi.github.io/Hadoop-Pig-BigData-2022/heatmap_with_filter.html)
+[View the interactive map](https://mo-rai.github.io/Hadoop-Pig-BigData-2022/heatmap_with_filter.html)
     
 
 ## Description  
