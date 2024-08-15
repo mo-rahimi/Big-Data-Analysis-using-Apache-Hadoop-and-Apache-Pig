@@ -1,10 +1,21 @@
 # Big Data Analysis using Apache Hadoop and Apache Pig
 - Analysis of UK Accident Data
 ## Description  
-My inspiration to do an analysis on accident data comes back to my first position as a data analyst at traffic department at 2011. 
-• Based on the statistics data around 1.3 million people are being killed yearly in road accidents and around 40 million people are being injured or experienced disability due to an accident.
-• Regarding the considerable economic losses that might happen to individuals, their families, and to nations in road accidents, figuring out the major reasoning of road crashes and finding out the solutions to decrease these losses is a vital task to do.
+My interest in analyzing accident data stems from my initial role as a data analyst in the traffic department in 2011. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
 
+Approximately 1.3 million people die annually in road accidents, with 40 million sustaining injuries or disabilities. The economic impact of road accidents is significant, affecting individuals, families, and nations. Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
+
+ This project aims to explore the UK Accident Data set from Kaggle to uncover insights into road safety and accident causation.
+Despite the dataset lacking specific details on accident causes—such as driver fatigue or maneuver errors—this analysis will address several critical questions:
+
+Query and problem Statements:
+
+1. How can we leverage the insights gained from analyzing the relationship between accident severity, road type, and the number of vehicles involved to inform infrastructure planning and traffic management strategies that prioritize safety for all road users?
+2. By examining the interplay between light conditions, weather patterns, and road surface factors, how can we develop predictive models to identify high-risk scenarios and implement targeted interventions to reduce the likelihood of serious accidents, especially during weekends when the number of casualties tends to be higher?
+3. What can we learn from the observation that most accidents occur in fine weather conditions? Can we apply behavioral insights to design awareness campaigns and incentive structures that encourage drivers to maintain a high level of vigilance regardless of environmental factors, ultimately leading to a reduction in non-serious accidents on days when they are less frequent than serious ones?
+4. How can we leverage the analysis of accident severity and its impact on the number of injured people to advocate for policy changes that prioritize post-crash care and rehabilitation services, ensuring that victims of road accidents receive timely and comprehensive support to aid their recovery and reintegration into society?
+5. By exploring the differences in accident patterns between weekdays and weekends, can we identify opportunities to optimize emergency response systems and resource allocation to better meet the varying demands, ultimately improving the overall efficiency and effectiveness of road safety measures?
+6. 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Query and problem Statements](query_problem_statements)
@@ -33,19 +44,7 @@ Two important approaches:
 • Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
 In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
 
-Query and problem Statements
-1. Are the number of accidents, damaged vehicles, and casualties more in weekends than weekdays?
-2. In which days of the week, the number of non-serious accidents is less than serious accidents?
-3. What is the impact of light conditions on severity of accidents? Are there more accidents
-happening during nights than days?
-4. What is the impact of weather conditions on severity of accidents?
-5. Based on Figure 20 most of the accidents had happened Fine weather. Does it mean drivers in
-rainy or snowy conditions are more cautious?
-6. What is the impact of road surface conditions on severity of accidents?
-7. Does the wet road surface cause more accidents than dry surface?
-8. What is the relation between the road type and the severity of accidents?
-9. What is the relation between the severity and the number of cars involved in an accident?
-10. How different level of severity affect the number of injured people?
+
 
 
 ## Installation
