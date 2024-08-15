@@ -4,7 +4,7 @@
 ## Description  
 My interest in analyzing accident data stems from my initial role as a data analyst in the traffic department in 2011. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
 
-Approximately 1.3 million people die annually in road accidents, with 40 million sustaining injuries or disabilities. The economic impact of road accidents is significant, affecting individuals, families, and nations. Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
+Approximately `1.3 million` people **die annually in road accidents**, with `40 million` sustaining injuries or disabilities. The economic impact of road accidents is significant, affecting individuals, families, and nations. Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
 
  This project aims to explore the UK Accident Data set from Kaggle to uncover insights into road safety and accident causation.
 Despite the dataset lacking specific details on accident causes—such as driver fatigue or maneuver errors—this analysis will address several critical questions:
