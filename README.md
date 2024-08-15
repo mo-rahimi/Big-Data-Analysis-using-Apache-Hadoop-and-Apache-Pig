@@ -1,12 +1,13 @@
 # Big Data Analysis using Apache Hadoop and Apache Pig
-- Analysis of UK Accident Data🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
+- `Analysis of UK Accident Data`🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
 
 ## Description  
-My interest in analyzing accident data stems from my initial role as a data analyst in the traffic department in 2011. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
+My interest in analyzing accident data stems from `my initial role as a data analyst in the traffic department in 2011`. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
 
-Approximately `1.3 million` people **die annually in road accidents**, with `40 million` sustaining injuries or disabilities. The economic impact of road accidents is significant, affecting individuals, families, and nations. Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
+Approximately `1.3 million people die annually in road accidents`, with `40 million sustaining injuries or disabilities`. The economic impact of road accidents is significant, affecting individuals, families, and nations. 
+Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
 
- This project aims to explore the UK Accident Data set from Kaggle to uncover insights into road safety and accident causation.
+ This project aims to explore and uncover insights into road safety and accident causation in UK between years 2000 to 2018.
 Despite the dataset lacking specific details on accident causes—such as driver fatigue or maneuver errors—this analysis will address several critical questions:
 
 **Query and problem Statements:**
@@ -15,6 +16,8 @@ Despite the dataset lacking specific details on accident causes—such as driver
 - How do light conditions, weather, and road type collectively influence the severity of accidents across different regions in the UK?
 - What insights can we derive from the relationship between road surface conditions and accident severity to inform policy changes aimed at improving road safety?
 - How can understanding the correlation between the number of vehicles involved and accident severity help in designing better traffic management systems?
+- What hidden patterns can we uncover in the data that might reveal surprising insights into road safety?
+- How can we leverage big data analytics to transform our understanding of traffic incidents and enhance public safety measures?
 
 
 1. How can we leverage the insights gained from analyzing the relationship between accident severity, road type, and the number of vehicles involved to inform infrastructure planning and traffic management strategies that prioritize safety for all road users?
@@ -22,10 +25,11 @@ Despite the dataset lacking specific details on accident causes—such as driver
 3. What can we learn from the observation that most accidents occur in fine weather conditions? Can we apply behavioral insights to design awareness campaigns and incentive structures that encourage drivers to maintain a high level of vigilance regardless of environmental factors, ultimately leading to a reduction in non-serious accidents on days when they are less frequent than serious ones?
 4. How can we leverage the analysis of accident severity and its impact on the number of injured people to advocate for policy changes that prioritize post-crash care and rehabilitation services, ensuring that victims of road accidents receive timely and comprehensive support to aid their recovery and reintegration into society?
 5. By exploring the differences in accident patterns between weekdays and weekends, can we identify opportunities to optimize emergency response systems and resource allocation to better meet the varying demands, ultimately improving the overall efficiency and effectiveness of road safety measures?
-6. 
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Query and problem Statements](query_problem_statements)
+- [data set](data_set)
 - [Installation](#installation)
 - [Dataset Overview](#dataset_overview)
 - [Usage](#usage)
@@ -51,11 +55,14 @@ Two important approaches:
 • Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
 In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
 
-
-
+## Data set
+The UK government amassed traffic data from 2000 and 2018, recording over 1.8 million accidents in the process and making this one of the most comprehensive traffic data sets out there. It's a huge picture of a country undergoing change.
+- download `https://www.kaggle.com/datasets/devansodariya/road-accident-united-kingdom-uk-dataset`
+  
 
 ## Installation
 Architecture
+- data set 
 ### Software Requirements
 - Windows OS
 - Virtual Machine to run Hortonworks Sandbox
