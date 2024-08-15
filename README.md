@@ -10,9 +10,12 @@ Approximately `1.3 million` people **die annually in road accidents**, with `40 
 Despite the dataset lacking specific details on accident causes—such as driver fatigue or maneuver errors—this analysis will address several critical questions:
 
 **Query and problem Statements:**
-How do social and economic factors influence the frequency and severity of road accidents on weekends compared to weekdays?
-How do varying weather patterns interact with driver behavior and infrastructure quality to affect accident severity?
-How do light conditions, weather, and road type collectively influence the severity of accidents across different regions in the UK?
+- How do social and economic factors influence the frequency and severity of road accidents on weekends compared to weekdays?
+- How do varying weather patterns interact with driver behavior and infrastructure quality to affect accident severity?
+- How do light conditions, weather, and road type collectively influence the severity of accidents across different regions in the UK?
+- What insights can we derive from the relationship between road surface conditions and accident severity to inform policy changes aimed at improving road safety?
+- How can understanding the correlation between the number of vehicles involved and accident severity help in designing better traffic management systems?
+
 
 1. How can we leverage the insights gained from analyzing the relationship between accident severity, road type, and the number of vehicles involved to inform infrastructure planning and traffic management strategies that prioritize safety for all road users?
 2. By examining the interplay between light conditions, weather patterns, and road surface factors, how can we develop predictive models to identify high-risk scenarios and implement targeted interventions to reduce the likelihood of serious accidents, especially during weekends when the number of casualties tends to be higher?
