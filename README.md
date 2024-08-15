@@ -8,7 +8,7 @@ Approximately `1.3 million people die annually in road accidents`, with `40 mill
 Understanding the primary causes of these incidents is crucial for developing effective prevention strategies.
 
  This project aims to explore and uncover insights into road safety and accident causation in UK between years 2000 to 2018.
-Despite the dataset lacking specific details on accident causes—such as driver fatigue or maneuver errors—this analysis will address several critical questions:
+Despite the dataset lacking specific details on accident causes—such as `driver fatigue` or `maneuver errors`, this analysis will address several critical questions:
 
 **Query and problem Statements:**
 - How do social and economic factors influence the frequency and severity of road accidents on weekends compared to weekdays?
@@ -55,9 +55,9 @@ Two important approaches:
 • Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
 In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
 
-## Data set
+## Data Set
 The UK government amassed traffic data from 2000 and 2018, recording over 1.8 million accidents in the process and making this one of the most comprehensive traffic data sets out there. It's a huge picture of a country undergoing change.
-- download `https://www.kaggle.com/datasets/devansodariya/road-accident-united-kingdom-uk-dataset`
+- Download (https://www.kaggle.com/datasets/devansodariya/road-accident-united-kingdom-uk-dataset)
   
 
 ## Installation
