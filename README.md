@@ -57,38 +57,29 @@ This project analyzes UK accident data to understand the factors influencing roa
 
 The data analysis is performed using the Pig tool, while Python is utilized for data visualization.
 
-Two important approaches:
-• First: investigating the influence of different conditions such as road type, road surface condition, weather condition and light condition on the severity of accidents.
-• Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
-In the current project, all the analysis has been done by Pig tool and Python is just used for the visualization.
+**Two important approaches:**
+- First: investigating the influence of different conditions such as road type, road surface condition, weather condition and light condition on the severity of accidents.
+- Second: finding out the relation between the severity with number of involved vehicles in the accident and impact of the severities on the number of causalities.
 
-## Data Set
+
+## Data Set Overview
 The UK government amassed traffic data from 2000 and 2018, recording over 1.8 million accidents in the process and making this one of the most comprehensive traffic data sets out there. It's a huge picture of a country undergoing change.
 - Download (https://www.kaggle.com/datasets/devansodariya/road-accident-united-kingdom-uk-dataset)
   
 
 ## Installation
-Architecture
-- data set 
+ 
 ### Software Requirements
 - Windows OS
 - Virtual Machine to run Hortonworks Sandbox
-- Hadoop
-- Pig
-- Python for data visualization
+- Apache Hadoop
+- Apache Pig
+- Python 
 
 ### Hardware Requirements
 - Hard Disk: at least 500 GB
-- RAM: at least 12 GB
+- RAM: at least 16 GB
 - Processor: Core i5 or above
-
-## Dataset Overview
-- The dataset includes over 1.8 million accidents from 2000 to 2018, with 30,032 rows analyzed for this project.
-- Key features include:
-  - **Accident Severity**: Classified into levels 1 to 5; most accidents (87%) have moderate severity (Level 3).
-  - **Day of Week**: Analyzed to determine the distribution of accidents by day.
-
-- The UK accident data is sourced from [Kaggle](www.Kaggle.com).
 
 ## Usage (Hadoop, Pig)
 ### Loading Data to Hadoop
@@ -100,16 +91,13 @@ Architecture
 ### Data Analysis Using Pig
 
 1. **Access Pig View** in Ambari to write, run, and store Pig scripts for data analysis.
-2. **Scripts**: A total of 23 scripts are created for various analyses. Example scripts include:
-   - **Severity Analysis**: Analyzing accident severity based on different conditions.
-   - **Casualties Analysis**: Counting casualties per accident severity.
-
+2. **Scripts**: A total of 23 scripts are created for various analyses. Example scripts include
 3. **Save Results**: Use the STORE command to save the results in HDFS under the `admin/output` directory.
 
 
 ## Code Examples and Visulization
 
-## Example usage command
+### Example usage command
 pig -f your_pig_script.pig
 
 ### Sample Pig Script for Accident Severity
@@ -135,7 +123,46 @@ count_severity = FOREACH severity_count GENERATE
 
 DUMP count_severity;
 ```
+### Sample Pig Script for Severity_Based_on_LightCondition
 
+```pig
+accident_data = load '/user/big_data_project/UK_CarAccident_Data.cv/' USING PigStorage (',');
+accident = FILTER accident_data BY $0>1;
+distinct accident = DISTINCT accident;
+accident_limit = LIMIT distinct_accident 30000;
+columns = FOREACH accident_limit GENERATE $7 as Accident_Severity, $24 as Light_Conditions, $32 as Number_Of_Chains;
+
+L1_columns= Filter columns BY Accident_Severity =='Severity_1';
+L1_final_columns = FOREACH L1_columns GENERATE Light_Conditions, Number_Of_Chains;
+L1_group = GROUP L1_final_columns BY Light_Conditions;
+L1_count = FOREACH L1_group GENERATE group as Light_Conditions, SUM(L1_final_columns.Number_Of_Chains) as NumberofAccident;
+
+L2_columns= Filter columns BY Accident_Severity =='Severity_2';
+L2_final_columns = FOREACH L2_columns GENERATE Light_Conditions, Number_Of_Chains;
+L2_group = GROUP L2_final_columns BY Light_Conditions;
+L2_count = FOREACH L2_group GENERATE group as Light_Conditions, SUM(L2_final_columns.Number_Of_Chains) as NumberofAccident;
+
+L3_columns= Filter columns BY Accident_Severity =='Severity_3';
+L3_final_columns = FOREACH L3_columns GENERATE Light_Conditions, Number_Of_Chains;
+L3_group = GROUP L3_final_columns BY Light_Conditions;
+L3_count = FOREACH L3_group GENERATE group as Light_Conditions, SUM(L3_final_columns.Number_Of_Chains) as NumberofAccident;
+
+L4_columns= Filter columns BY Accident_Severity =='Severity_4' ;
+L4_final_columns = FOREACH L4_columns GENERATE Light_Conditions, Number_Of_Chains;
+L4_group = GROUP L4_final_columns BY Light_Conditions;
+L4 count = FOREACH L4 group GENERATE group as Light Conditions, SUM(L4 final columns. Number Of Chains) as NumberofAccident;
+
+L5_columns= Filter columns BY Accident Severity =='Severity 5';
+L5_final_columns = FOREACH L5_columns GENERATE Light_Conditions, Number_Of_Chains;
+L5_group = GROUP L5_final_columns BY Light_Conditions;
+L5_count = FOREACH L5_group GENERATE group as Light_Conditions, SUM(L5_final_columns.Number_Of_Chains) as NumberofAccident;
+
+STORE L1_count INTO output/Severity Level 1 Based On Light Condition' using PigStorage(',');
+STORE L2_count INTO 'output/Severity Level 2 Based On Light Condition' using PieStorage(',');
+STORE L3_count INTO 'output/Severity Level 3 Based On Light Condition' using PigStorage(','); 
+STORE L4_count INTO 'output/Severity Level 4 Based On Light Condition' using PigStorage(',');
+STORE L5_count INTO 'output/Severity Level 5 Based On Light Condition' using Piestorage(',');
+```
 ### Visualizations
 
 - **Accident Severity Distribution**: A pie chart showing the distribution of accident severity levels.
