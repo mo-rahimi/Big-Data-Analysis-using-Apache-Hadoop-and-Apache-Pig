@@ -1,9 +1,7 @@
 # Big Data Analysis using Apache Hadoop and Apache Pig
 - `Analysis of UK Accident Data`🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
 
- [View the interactive heatmap]
- (https://github.com/mo-rahimi/Hadoop-Pig-BigData-2022/blob/html_p/heatmap_with_filter.html)
-
+ 
 ## Description  
 My interest in analyzing accident data stems from `my initial role as a data analyst in the traffic department in 2011`. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
 
@@ -14,21 +12,27 @@ Understanding the primary causes of these incidents is crucial for developing ef
 Despite the dataset lacking specific details on accident causes—such as `driver fatigue` or `maneuver errors`, this analysis will address several critical questions:
 
 **Query and problem Statements:**
-- How do social and economic factors influence the frequency and severity of road accidents on weekends compared to weekdays?
-- How do varying weather patterns interact with driver behavior and infrastructure quality to affect accident severity?
-- How do light conditions, weather, and road type collectively influence the severity of accidents across different regions in the UK?
-- What insights can we derive from the relationship between road surface conditions and accident severity to inform policy changes aimed at improving road safety?
-- How can understanding the correlation between the number of vehicles involved and accident severity help in designing better traffic management systems?
-- What hidden patterns can we uncover in the data that might reveal surprising insights into road safety?
-- How can we leverage big data analytics to transform our understanding of traffic incidents and enhance public safety measures?
+1. How do social and economic factors affect road accidents frequency and severity on weekends versus weekdays?
 
+2. How do weather patterns, driver behavior, and infrastructure quality impact accident severity?
+ 
+3. How do light conditions, weather, and road type affect accident severity in different UK regions?
 
-1. How can we leverage the insights gained from analyzing the relationship between accident severity, road type, and the number of vehicles involved to inform infrastructure planning and traffic management strategies that prioritize safety for all road users?
-2. By examining the interplay between light conditions, weather patterns, and road surface factors, how can we develop predictive models to identify high-risk scenarios and implement targeted interventions to reduce the likelihood of serious accidents, especially during weekends when the number of casualties tends to be higher?
-3. What can we learn from the observation that most accidents occur in fine weather conditions? Can we apply behavioral insights to design awareness campaigns and incentive structures that encourage drivers to maintain a high level of vigilance regardless of environmental factors, ultimately leading to a reduction in non-serious accidents on days when they are less frequent than serious ones?
-4. How can we leverage the analysis of accident severity and its impact on the number of injured people to advocate for policy changes that prioritize post-crash care and rehabilitation services, ensuring that victims of road accidents receive timely and comprehensive support to aid their recovery and reintegration into society?
-5. By exploring the differences in accident patterns between weekdays and weekends, can we identify opportunities to optimize emergency response systems and resource allocation to better meet the varying demands, ultimately improving the overall efficiency and effectiveness of road safety measures?
+4. What insights can be derived from road surface conditions and accident severity for informing policy changes to improve road safety?
 
+5. How does understanding the correlation between the number of vehicles involved and accident severity help design better traffic management systems?
+ 
+6. What hidden patterns in the data reveal surprising insights into road safety?
+
+7. How can analysis of accident severity, road type, and the number of vehicles involved inform infrastructure planning and traffic management strategies prioritizing safety?
+
+8. How can examining light conditions, weather patterns, and road surface factors help develop predictive models to reduce serious accidents likelihood, especially during weekends with higher casualties?
+
+9. What can be learned from accidents occurring in fine weather conditions, and how can behavioral insights be applied to design awareness campaigns and incentives to maintain vigilance, reducing non-serious accidents on less frequent days?
+
+10. How can analysis of accident severity and its impact on injured people inform policy changes prioritizing post-crash care and rehabilitation services?
+
+11. How can exploring differences in accident patterns between weekdays and weekends optimize emergency response systems and resource allocation, improving road safety measures' efficiency and effectiveness?
 ## Table of Contents
 - [Introduction](#introduction)
 - [Query and problem Statements](query_problem_statements)
