@@ -1,6 +1,6 @@
 # Big Data Analysis using Apache Hadoop and Apache Pig
-- `Analysis of UK Accident Data`🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
-
+- `Analysis of UK Accident Data`🚥  🚦  🚥  🚥  🚦  🚥 
+<img src="images/heat map 0.png" alt="Overview of the project" width="70%">
  
 ## Description  
 My interest in analyzing accident data stems from `my initial role as a data analyst in the traffic department in 2011`. During that time, I observed a consistent number of accidents and injuries, which sparked my curiosity about the factors contributing to these statistics.
@@ -165,13 +165,9 @@ STORE L5_count INTO 'output/Severity Level 5 Based On Light Condition' using Pie
 ```
 ### Visualizations
 
-- **Accident Severity Distribution**: A pie chart showing the distribution of accident severity levels.
-  
-Accident Severity Pie Chart
+- **Accident Severity Distribution**: 
 
-- **Accidents by Day of the Week**: A bar chart illustrating the number of accidents occurring on each day.
-
-Accidents by Day of the Week
+- **Accidents by Day of the Week**: 
 
 ## Conclusion
 
