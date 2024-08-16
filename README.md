@@ -2,8 +2,7 @@
 - `Analysis of UK Accident Data`🚥 🚔 🚑 🚦🚧 🚨 🚥 🛑
 
  [View the interactive heatmap]
- ([html_p/heatmap_with_filter.html](https://github.com/mo-rahimi/Hadoop-Pig-BigData-2022/blob/html_p/heatmap_with_filter.html))
-
+ 
  https://github.com/mo-rahimi/Hadoop-Pig-BigData-2022/blob/html_p/heatmap_with_filter.html
 
 ## Description  
