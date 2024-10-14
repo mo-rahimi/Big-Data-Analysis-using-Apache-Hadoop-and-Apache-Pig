@@ -126,6 +126,7 @@ DUMP count_severity;
 ### Sample Pig Script for Severity_Based_on_LightCondition
 
 ```pig
+
 accident_data = load '/user/big_data_project/UK_CarAccident_Data.cv/' USING PigStorage (',');
 accident = FILTER accident_data BY $0>1;
 distinct accident = DISTINCT accident;
