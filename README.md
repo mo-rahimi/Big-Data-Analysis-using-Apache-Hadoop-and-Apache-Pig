@@ -10,7 +10,6 @@ Understanding the primary causes of these incidents is crucial for developing ef
  This project aims to explore and uncover insights into road safety and accident causation in UK between years 2000 to 2018.
 Despite the dataset lacking specific details on accident causes—such as `driver fatigue` or `maneuver errors`, this analysis will address several critical questions:
 
-
 **Query and problem Statements:**
 1. How do social and economic factors affect road accidents frequency and severity on weekends versus weekdays?
 
